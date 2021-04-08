@@ -2,22 +2,9 @@ class myElement extends HTMLElement {
 	constructor() {
 		super()
 		this.attachShadow({ mode: 'open' })
-	}
-	//Agregamos el observador
-	static get observedAttributes() {
-		return ['title', 'parrafo', 'img']
-	}
-	//Agregamos el attribute changed callback que es quien controla el ciclo de vida
-	attributeChangedCallback(atributo, oldValue, newValue) {
-		if (atributo === 'title') {
-			this.title = newValue
-		}
-		if (atributo === 'parrafo') {
-			this.parrafo = newValue
-		}
-		if (atributo === 'img') {
-			this.img = newValue
-		}
+		this.title = this.getAttribute('title')
+		this.parrafo = this.getAttribute('parrafo')
+		this.img = this.getAttribute('img')
 	}
 	getTemplate() {
 		const template = document.createElement('template')
