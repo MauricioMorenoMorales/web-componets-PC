@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		my-element {
+			--primary-color: blue;
+			--heading-pŕimary: 40px;
+		}
+
+		.primero {
+			--primary-color: red;
+		}
+
+		.segundo {
+			--secondary-color: lime;
+		}
+	</style>
+</head>
+
+<body>
+	<my-element class="primero">
+		<span slot="title">Hola desde una etiqueta h1</span>
+		<span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+	</my-element>
+	<my-element class="segundo">
+		<span slot="title">Hola desde una etiqueta h1</span>
+		<span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+	</my-element>
+	<my-element>
+		<span slot="title">Hola desde una etiqueta h1</span>
+		<span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+	</my-element>
+	<my-element>
+		<span slot="title">Hola desde una etiqueta h1</span>
+		<span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+	</my-element>
+	<script src="./my-element.js"></script>
+</body>
+
+</html>
